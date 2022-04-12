@@ -9,7 +9,7 @@
 
 
 
-function dosomething(a,b,c){
+(function dosomething(a,b,c){
 var cxDataObject = {};
 cxDataObject['name']=a;
 cxDataObject['mail']=b;
@@ -17,7 +17,7 @@ cxDataObject['username']=c;
 
 window.ORA = window.ORA || {productReady: []};
 ORA.productReady.push(['analytics', function(cxDataObject) {return function() {return ORA.view({"data": cxDataObject})}}(cxDataObject)]);
-}
+})();
 
 
 
