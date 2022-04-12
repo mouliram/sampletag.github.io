@@ -14,7 +14,6 @@
   s.async = true;
   s.src = "//c.oracleinfinity.io/acs/account/616407edcb4a4ab7a80907fef309508a/js/testing_firsttest/odc.js";
   scripts.parentNode.insertBefore(s, scripts);
-}());
 function dosomething(a,b,c){
 var cxDataObject = {};
 
@@ -26,7 +25,7 @@ window.ORA = window.ORA || {productReady: []};
 ORA.productReady.push(['analytics', function(cxDataObject) {return function() {return ORA.view({"data": cxDataObject})}}(cxDataObject)]);
 
 
-}
+}}());
 
 
 </script>
