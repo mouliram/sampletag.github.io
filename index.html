@@ -10,12 +10,12 @@
 
 
 (function(){
-var cxDataObject = {};
+var cxDataObject = {"name":"ram","mail":"ram@gmail.com"};
 
 
 
 window.ORA = window.ORA || {productReady: []};
-ORA.productReady.push(['analytics', function(cxDataObject) {return function() {return ORA.click({"data": cxDataObject})}}(cxDataObject)]);
+ORA.productReady.push(['analytics', function(cxDataObject) {return function() {return ORA.view({"data": cxDataObject})}}(cxDataObject)]);
 })();
 
 
