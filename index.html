@@ -9,15 +9,24 @@
 
 
 
-(function dosomething(a,b,c){
+(function() {
+  var scripts = document.getElementsByTagName('script')[0];
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = "//c.oracleinfinity.io/acs/account/616407edcb4a4ab7a80907fef309508a/js/testing_firsttest/odc.js";
+  scripts.parentNode.insertBefore(s, scripts);
+}());
+function dosomething(a,b,c){
 var cxDataObject = {};
-cxDataObject['name']=a;
-cxDataObject['mail']=b;
-cxDataObject['username']=c;
+
+cxDataObject["a"] = a;
+cxDataObject["b"] = b;
+cxDataObject["c"] = c;
+}
 
 window.ORA = window.ORA || {productReady: []};
 ORA.productReady.push(['analytics', function(cxDataObject) {return function() {return ORA.view({"data": cxDataObject})}}(cxDataObject)]);
-})();
+
 
 
 
