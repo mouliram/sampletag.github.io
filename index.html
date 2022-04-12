@@ -5,7 +5,24 @@
   </head>
 
 	<body>
+<script type="text/javascript">
 
+
+
+(function dosomething(a,b,c){
+var cxDataObject = {};
+cxDataObject['name']=a;
+cxDataObject['mail']=b;
+cxDataObject['username']=c;
+
+window.ORA = window.ORA || {productReady: []};
+ORA.productReady.push(['analytics', function(cxDataObject) {return function() {return ORA.view({"data": cxDataObject})}}(cxDataObject)]);
+})();
+
+
+
+
+</script>
 	<!-- Main div code -->
 	<div id="main">
 	<div class="h-tag">
@@ -16,15 +33,15 @@
 	<table cellspacing="2" align="center" cellpadding="8" border="0">
 	<tr>
 	<td align="right">Enter Name :</td>
-	<td><input type="text" placeholder="Enter user here" class="tb" /></td>
+	<td><input type="text" id="name" placeholder="Enter user here" class="tb" /></td>
 	</tr>
 	<tr>
 	<td align="right">Enter Email ID :</td>
-	<td><input type="text" placeholder="Enter Email ID here" class="tb" /></td>
+	<td><input type="text" id="mail" placeholder="Enter Email ID here" class="tb" /></td>
 	</tr>
 	<tr>
 	<td align="right">Enter Username :</td>
-	<td><input type="text" placeholder="Enter Username here" class="tb" /></td>
+	<td><input type="text" id="username" placeholder="Enter Username here" class="tb" /></td>
 	</tr>
 	<tr>
 	<td align="right">Enter Password :</td>
@@ -38,7 +55,7 @@
 	<td></td>
 	<td>
 	<input type="reset" value="Clear Form" id="res" class="btn" />
-	<input type="submit" value="Create Account" class="btn" /></td>
+	<input type="submit" class="btn" value="Click" onclick="dosomething(name,mail,username)"/></td>
 	</tr>
 	</table>
 	</div>
