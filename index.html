@@ -8,14 +8,16 @@
 <script type="text/javascript">
 
 
-var cxDataObject = {	
-	"wt.event_name":"contact us", // Sample Custom Variable
-	"wt.dcsvid":"Hi this is new id"
-	}
 
-	// DO NOT EDIT BELOW THIS LINE - ORA.click()
-	window.ORA = window.ORA || {productReady: []};
-	ORA.productReady.push(['analytics', function(cxDataObject) {return function() {return ORA.click({"data": cxDataObject})}}(cxDataObject)]);
+(function(){
+var cxDataObject = {};
+
+
+
+window.ORA = window.ORA || {productReady: []};
+ORA.productReady.push(['analytics', function(cxDataObject) {return function() {return ORA.click({"data": cxDataObject})}}(cxDataObject)]);
+})();
+
 
 
 
