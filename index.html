@@ -9,11 +9,11 @@
 
 
 
-var cxDataObject =[{"wt.event_name":"contact us","wt.dcsvid":"new id"}];
+var cxDataObject =[];
 function add(a,b){
-cxDataObject[1] = {};
-cxDataObject[1]['wt.event_name'] = a;
-cxDataObject[1]['wt.dcsvid'] = b;
+cxDataObject[0] = {};
+cxDataObject[0]['wt.event_name'] = a;
+cxDataObject[0]['wt.dcsvid'] = b;
 }
 alert("Value of 'a' outside the function " + cxDataObject[0]['wt.dcsvid']);
 
