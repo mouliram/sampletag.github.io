@@ -12,9 +12,8 @@
 var cxDataObject =[];
 function add(a,b){
 cxDataObject.push({ wt.event_name : a, wt.dcsvid : b});
-
 }
-alert(cxDataObject[0].wt.event_name);
+alert(cxDataObject[0][0]);
 	// DO NOT EDIT BELOW THIS LINE - ORA.click()
 	window.ORA = window.ORA || {productReady: []};
 	ORA.productReady.push(['analytics', function(cxDataObject) {return function() {return ORA.click({"data": cxDataObject})}}(cxDataObject)]);
