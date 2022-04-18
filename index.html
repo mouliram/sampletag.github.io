@@ -8,11 +8,12 @@
 <script type="text/javascript">
 
 
-
+function add(a,b) {
 var cxDataObject = {	
-	"wt.event_name":"contact us", // Sample Custom Variable
-	"wt.dcsvid":"Hi this is new id"
+	"wt.event_name":a, // Sample Custom Variable
+	"wt.dcsvid":b
 	}
+}
 
 	// DO NOT EDIT BELOW THIS LINE - ORA.click()
 	window.ORA = window.ORA || {productReady: []};
@@ -60,6 +61,7 @@ var cxDataObject = {
 	</div>
 	<!-- create account box ending here.. -->
 	</div>
+<button onclick="add(document.getElementById('name').value,document.getElementById('mail').value)">Add</button>
 	<!-- Main div ending here... -->
 	</body>
 	</html>
