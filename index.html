@@ -9,10 +9,10 @@
 
 var cxDataObject =[];
 
-function add(){
+function add(a,b){
 window.cxDataObject[0]={};
-window.cxDataObject[0]["wt.event_name"]=document.getElementById("name").value;
-window.cxDataObject[0]["wt.dcsvid"]=document.getElementById("mail").value;
+window.cxDataObject[0]["wt.event_name"]=a;
+window.cxDataObject[0]["wt.dcsvid"]=b;
 return cxDataObject;
 }
 
@@ -68,6 +68,6 @@ ORA.productReady.push(['analytics', function(cxDataObject) {return function() {r
 	<!-- create account box ending here.. -->
 	</div>
 	<!-- Main div ending here... -->
-<button onclick="add()">Click me</button>
+<button onclick="add(name,mail)">Click me</button>
 	</body>
 	</html>
