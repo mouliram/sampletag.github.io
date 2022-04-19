@@ -15,16 +15,10 @@ window.cxDataObject[0]["wt.event_name"]=a;
 window.cxDataObject[0]["wt.dcsvid"]=b;
 return cxDataObject;
 }
-add();
-alert(window.cxDataObject[0]["wt.dcsvid"]);
-(function(){
-
-add();
-
 
 window.ORA = window.ORA || {productReady: []};
 ORA.productReady.push(['analytics', function(cxDataObject) {return function() {return ORA.click({"data": cxDataObject})}}(cxDataObject)]);
-})();
+});
 
 
 
