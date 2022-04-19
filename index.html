@@ -8,8 +8,13 @@
 <script type="text/javascript">
 
 
-var cxDataObject = {"wt.event_name":"contact us", // Sample Custom Variable
-	"wt.dcsvid":"Hi this is new id"};
+var cxDataObject =[];
+function add(){
+cxDataObject[0]={};
+cxDataObject[0]["wt.event_name"]="contact us";
+cxDataObject[0]["wt.dcsvid"]="Hi this is new id";
+return cxDataObject;
+}
 (function(){
 
 
@@ -62,5 +67,6 @@ ORA.productReady.push(['analytics', function(cxDataObject) {return function() {r
 	<!-- create account box ending here.. -->
 	</div>
 	<!-- Main div ending here... -->
+<button onclick="add()">Click me</button>
 	</body>
 	</html>
