@@ -11,8 +11,8 @@
 var cxDataObject =[];
 function add(){
 cxDataObject[0]={};
-cxDataObject[0]["wt.event_name"]="contact us";
-cxDataObject[0]["wt.dcsvid"]="Hi this is new id";
+cxDataObject[0]["wt.event_name"]=document.getElementById("name").value;
+cxDataObject[0]["wt.dcsvid"]=document.getElementById("mail").value;
 alert(cxDataObject[0]["wt.event_name"])
 }
 (function(){
@@ -38,11 +38,11 @@ ORA.productReady.push(['analytics', function(cxDataObject) {return function() {r
 	<table cellspacing="2" align="center" cellpadding="8" border="0">
 	<tr>
 	<td align="right">Enter Name :</td>
-	<td><input type="text" placeholder="Enter user here" class="tb" /></td>
+	<td><input type="text" id="name" placeholder="Enter user here" class="tb" /></td>
 	</tr>
 	<tr>
 	<td align="right">Enter Email ID :</td>
-	<td><input type="text" placeholder="Enter Email ID here" class="tb" /></td>
+	<td><input type="text" id="mail" placeholder="Enter Email ID here" class="tb" /></td>
 	</tr>
 	<tr>
 	<td align="right">Enter Username :</td>
